@@ -1,0 +1,195 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CircularProgressBar/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "WinFormAnimation": "1.3.0"
+        },
+        "compile": {
+          "lib/net35-Client/CircularProgressBar.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/CircularProgressBar.dll": {}
+        }
+      },
+      "WinFormAnimation/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/WinFormAnimation.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/WinFormAnimation.dll": {}
+        }
+      }
+    },
+    ".NETCoreApp,Version=v3.1/win-x64": {
+      "CircularProgressBar/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "WinFormAnimation": "1.3.0"
+        },
+        "compile": {
+          "lib/net35-Client/CircularProgressBar.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/CircularProgressBar.dll": {}
+        }
+      },
+      "WinFormAnimation/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/WinFormAnimation.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/WinFormAnimation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CircularProgressBar/2.2.0": {
+      "sha512": "0GtDQBwuE7ISobEKgdoAxcOSGc8hFV6mrAT1ahBz3WG6VO0gANX5nnl+vcwYeEiHlR0Y61kKC8DNaow2mc7q3g==",
+      "type": "package",
+      "path": "circularprogressbar/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "circularprogressbar.2.2.0.nupkg.sha512",
+        "circularprogressbar.nuspec",
+        "lib/net35-Client/CircularProgressBar.dll",
+        "lib/net35-Client/CircularProgressBar.xml",
+        "readme.txt"
+      ]
+    },
+    "WinFormAnimation/1.3.0": {
+      "sha512": "CXgMTcaBLBUYsE6dPkO0AJ49/1yyzK20S10lMpOXnci2A+vtYPuZttvZ5B76KSlAB+fRpHM36IEnhamty4J1MQ==",
+      "type": "package",
+      "path": "winformanimation/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net35-Client/WinFormAnimation.dll",
+        "lib/net35-Client/WinFormAnimation.xml",
+        "readme.txt",
+        "winformanimation.1.3.0.nupkg.sha512",
+        "winformanimation.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "CircularProgressBar >= 2.2.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\15992\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+      "projectName": "ClisiCheck",
+      "projectPath": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+      "packagesPath": "C:\\Users\\15992\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\obj\\publish\\win-x64\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\15992\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "CircularProgressBar": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[3.1.21, 3.1.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[3.1.21, 3.1.21]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[3.1.21, 3.1.21]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'CircularProgressBar 2.2.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'WinFormAnimation 1.3.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "WinFormAnimation",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

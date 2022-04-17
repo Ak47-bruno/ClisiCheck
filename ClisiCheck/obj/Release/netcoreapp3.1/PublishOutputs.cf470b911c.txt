@@ -1,0 +1,7 @@
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\ClisiCheck.exe
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\ClisiCheck.dll
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\ClisiCheck.deps.json
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\ClisiCheck.runtimeconfig.json
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\ClisiCheck.pdb
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\CircularProgressBar.dll
+C:\Users\15992\source\repos\ClisiCheck\ClisiCheck\bin\Release\netcoreapp3.1\publish\WinFormAnimation.dll

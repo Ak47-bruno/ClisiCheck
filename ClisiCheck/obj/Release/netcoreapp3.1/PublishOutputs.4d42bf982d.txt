@@ -1,0 +1,7 @@
+C:\Users\15992\Documents\SICHECK\ClisiCheck.exe
+C:\Users\15992\Documents\SICHECK\ClisiCheck.dll
+C:\Users\15992\Documents\SICHECK\ClisiCheck.deps.json
+C:\Users\15992\Documents\SICHECK\ClisiCheck.runtimeconfig.json
+C:\Users\15992\Documents\SICHECK\ClisiCheck.pdb
+C:\Users\15992\Documents\SICHECK\CircularProgressBar.dll
+C:\Users\15992\Documents\SICHECK\WinFormAnimation.dll

@@ -121,6 +121,7 @@ namespace ClisiCheck
                     escritorioCheck();
                     break;
                 case "Caixa":
+                    escritorioCheck();
                     break;
                 case "Gerência":
                     break;
@@ -132,10 +133,22 @@ namespace ClisiCheck
             string displayName;
             string displayVersion;
             List<string> list = new List<string>();
-            List<string> listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome" ,"Google Drive", "CutePDF", "FortiClient VPN", "Java", "LibreOffice", "Adobe", "Acrobat Reader DC"};
             List<string> listVersion = new List<string>();
+            List<string> listProgram = new List<string>();
             RegistryKey key;
-            // search in: LocalMachine_64
+            switch (lblModo.Text)
+            {
+                case "Escritório":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "CutePDF", "FortiClient VPN", "Java", "LibreOffice", "Adobe", "Acrobat Reader DC", "Ivanti Endpoint" };
+                    break;
+                case "Caixa":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
+                    break;
+                case "Gerência":
+                    break;
+            }
+            
+            //Verifica todos os softwares no computador
             List<String> source = new List<string> { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall", "SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall"};
             foreach (var s in source)
             {
@@ -165,34 +178,41 @@ namespace ClisiCheck
             //Verifica se os softwares estão instalados
             if (!list.Exists(e => e.Contains("SAP GUI for Windows")))
             {
-               if(!list.Exists(e => e.Contains("SAP GUI for Windows 7.70  (Patch 5) Versão 7.70 Compilation 1"))) {
+                    listBoxResult.Items.Add("SAP GUI for Windows");
+                                
+            }
+            else
+            {
+                if (!list.Exists(e => e.Contains("SAP GUI for Windows 7.70  (Patch 5) Versão 7.70 Compilation 1")))
+                {
                     listBoxResult.Items.Add("SAP GUI Desatualizado");
                 }
-                else
-                {
-                    listBoxResult.Items.Add("SAP GUI for Windows");
-                }
-                
             }
             
             if (!list.Exists(e => e.Contains("McAfee Agent")))
+            {               
+                    listBoxResult.Items.Add("McAfee Agente");                           
+            }
+            else
             {
                 if (!list.Exists(e => e.Contains("McAfee Agent Versão 5.7.5.504")))
                 {
                     listBoxResult.Items.Add("McAfee Agent Desatualizado");
                 }
-                else
-                {
-                    listBoxResult.Items.Add("McAfee Agente");
-                }
-                
             }
 
             for (int g = 0; g < listProgram.Count; g++)
             {   
-                if (list.Exists(e => e.Contains(listProgram[g])))
+                if (!list.Exists(e => e.Contains(listProgram[g])))
                 {
-                    listBoxResult.Items.Add(listProgram[g]);
+                    if(listProgram[g] == "Ivanti Endpoint")
+                    {
+                        listBoxResult.Items.Add("Landesk");
+                    }
+                    else
+                    {
+                        listBoxResult.Items.Add(listProgram[g]);
+                    }                    
                 }
             }
             
@@ -242,31 +262,32 @@ namespace ClisiCheck
                 //    listBoxResult.Items.Add(list[f]);
                 //}
             }
-           
 
+            checkPasta();
+
+        }
+
+        public void caixaCheck()
+        {
+
+        }
+
+        public void checkPasta()
+        {
             string path = "C:\\Program Files\\";
             bool result = Directory.Exists(path);
-           
 
-            path = "C:\\Program Files\\Google\\Chrome\\Application";
-            result = Directory.Exists(path);
-            progressBar.Value += 10;
-            progressBar.Text = progressBar.Value.ToString() + "%";
-            if (result != true)
-            {                
-               // listBoxResult.Items.Add("Chrome");               
-            }                 
-                               
+
             path = "C:\\app\\product\\11.2.0";
             result = Directory.Exists(path);
             progressBar.Value += 5;
             progressBar.Text = progressBar.Value.ToString() + "%";
             if (result != true)
             {
-               
+
                 listBoxResult.Items.Add("Oracle Net Manager");
-               
-            }                      
+
+            }
 
             path = "C:\\oracle";
             result = Directory.Exists(path);
@@ -274,22 +295,20 @@ namespace ClisiCheck
             progressBar.Text = progressBar.Value.ToString() + "%";
             if (result != true)
             {
-                listBoxResult.Items.Add("Pasta Oracle");               
-            }            
+                listBoxResult.Items.Add("Pasta Oracle");
+            }
 
             path = "C:\\Windows\\Bemol.ini";
             result = File.Exists(path);
             progressBar.Value += 5;
             progressBar.Text = progressBar.Value.ToString() + "%";
             if (result != true)
-            {                
-                listBoxResult.Items.Add("Bemol.ini");               
+            {
+                listBoxResult.Items.Add("Bemol.ini");
             }
 
             // string command = "/C notepad.exe";
             // Process.Start("cmd.exe", command);
-
-           
         }
 
         //Move a janela 

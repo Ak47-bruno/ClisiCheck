@@ -264,12 +264,24 @@ namespace ClisiCheck
             }
 
             checkPasta();
-
+            caixaCheck();
         }
 
         public void caixaCheck()
         {
+            string path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE - atalho - Atalho.lnk";
+            bool result = File.Exists(path);
+            if (!result)
+            {
+                listBoxResult.Items.Add("Atalho SAC");
+            }
 
+             path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+             result = File.Exists(path);
+            if (!result)
+            {
+                listBoxResult.Items.Add("Atalho CAIXA NFCE");
+            }
         }
 
         public void checkPasta()

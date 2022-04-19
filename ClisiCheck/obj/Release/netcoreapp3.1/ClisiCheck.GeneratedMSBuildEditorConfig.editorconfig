@@ -1,9 +1,3 @@
 is_global = true
-build_property.ApplicationManifest = 
-build_property.StartupObject = ClisiCheck.Program
-build_property.ApplicationDefaultFont = 
-build_property.ApplicationHighDpiMode = 
-build_property.ApplicationUseCompatibleTextRendering = 
-build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = ClisiCheck
-build_property.ProjectDir = C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\
+build_property.ProjectDir = C:\Users\15992\Documents\ClisiCheck\ClisiCheck\

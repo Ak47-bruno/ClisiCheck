@@ -63,24 +63,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HatchBack\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\15992\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+      "projectUniqueName": "C:\\Users\\15992\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
       "projectName": "ClisiCheck",
-      "projectPath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
-      "packagesPath": "C:\\Users\\HatchBack\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\obj\\",
+      "projectPath": "C:\\Users\\15992\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+      "packagesPath": "C:\\Users\\15992\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\15992\\Documents\\ClisiCheck\\ClisiCheck\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\HatchBack\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\15992\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -129,7 +124,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   },

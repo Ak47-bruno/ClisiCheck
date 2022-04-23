@@ -196,6 +196,7 @@ namespace ClisiCheck
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnChek);
             this.panel3.Controls.Add(this.label2);
@@ -238,6 +239,7 @@ namespace ClisiCheck
             // 
             // panel4
             // 
+            this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.progressBar);
             this.panel4.Location = new System.Drawing.Point(221, 245);
@@ -266,7 +268,7 @@ namespace ClisiCheck
             this.progressBar.ProgressColor = System.Drawing.Color.RoyalBlue;
             this.progressBar.ProgressWidth = 6;
             this.progressBar.SecondaryFont = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.progressBar.Size = new System.Drawing.Size(178, 168);
+            this.progressBar.Size = new System.Drawing.Size(168, 168);
             this.progressBar.StartAngle = 270;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -340,6 +342,7 @@ namespace ClisiCheck
             // 
             // panel6
             // 
+            this.panel6.AutoScroll = true;
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label3);
             this.panel6.Location = new System.Drawing.Point(221, 209);

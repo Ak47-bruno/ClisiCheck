@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RTSJp55tLlj7/xzEp+0YDIBORbhLd/dTlbIfAAvVfh2YQzLDa0yzejH/KEeiXWvnjK5EIqruHcgcKq0Mo/F66A==",
+  "dgSpecHash": "k0AVQvR5Fs/t3FsbeV6+sJuvwqdj9JYs9FLwJLfTfcOikEsE2DHGbI3rQCF/vN83chy5Q3nGPKlZWF7CjdXAbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\15992\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+  "projectFilePath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\15992\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
-    "C:\\Users\\15992\\.nuget\\packages\\winformanimation\\1.3.0\\winformanimation.1.3.0.nupkg.sha512"
+    "C:\\Users\\HatchBack\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
+    "C:\\Users\\HatchBack\\.nuget\\packages\\winformanimation\\1.3.0\\winformanimation.1.3.0.nupkg.sha512"
   ],
   "logs": [
     {

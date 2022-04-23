@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using System.Diagnostics;
 
 using System.Linq;
+using System.Net;
 
 //TO DO
 // Verificar versionanemento MCAfee, SAP
@@ -18,6 +19,7 @@ using System.Linq;
 // Instalação dos programas.
 namespace ClisiCheck
 {
+    //Código para o botao checkar ficar redondo
     public partial class start : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -175,6 +177,7 @@ namespace ClisiCheck
                     }
                 }
             }
+
             //Verifica se os softwares estão instalados
             if (!list.Exists(e => e.Contains("SAP GUI for Windows")))
             {
@@ -265,6 +268,7 @@ namespace ClisiCheck
 
             checkPasta();
             caixaCheck();
+            hostName();
         }
 
         public void caixaCheck()
@@ -321,6 +325,18 @@ namespace ClisiCheck
 
             // string command = "/C notepad.exe";
             // Process.Start("cmd.exe", command);
+        }
+
+        //método para verificar o nome do computador e o dominio
+        public void hostName()
+        {
+
+           var nome = Environment.MachineName;
+           // var dominio = Environment.UserDomainName;
+           var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+
+            listBoxResult.Items.Add(nomeCompleto);
+
         }
 
         //Move a janela 

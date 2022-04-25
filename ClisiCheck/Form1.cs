@@ -307,7 +307,7 @@ namespace ClisiCheck
 
             path = "C:\\oracle";
             result = Directory.Exists(path);
-            progressBar.Value += 5;
+            progressBar.Value += 90;
             progressBar.Text = progressBar.Value.ToString() + "%";
             if (result != true)
             {
@@ -335,7 +335,11 @@ namespace ClisiCheck
            // var dominio = Environment.UserDomainName;
            var nomeCompleto = Dns.GetHostEntry(nome).HostName;
 
-            listBoxResult.Items.Add(nomeCompleto);
+            if (!nomeCompleto.Equals(nome+".bemol.local"))
+            {
+                listBoxResult.Items.Add("Inserir no Domínio bemol.local");
+            }
+            
 
         }
 

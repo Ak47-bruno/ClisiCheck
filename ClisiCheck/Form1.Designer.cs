@@ -249,9 +249,7 @@ namespace ClisiCheck
             // 
             // progressBar
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.progressBar.AnimationSpeed = 500;
             this.progressBar.BackColor = System.Drawing.Color.White;
             this.progressBar.Font = new System.Drawing.Font("Nirmala UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

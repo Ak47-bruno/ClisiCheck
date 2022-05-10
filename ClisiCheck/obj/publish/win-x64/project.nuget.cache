@@ -1,14 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "Y7Bqdw659eK24EB4rv3//J1Zd3V8RM6IcmGAq2L5yNALSEUvSOJw66AYgnGc4MfSGUF54c93EOCWME2kOOCtGw==",
+  "dgSpecHash": "GnUzMo6yaVEbtVo8WZucUW2/f4+AHUmZ6+rHsEe/ty/2ZXKqZmTTsNNVLsQihocgKV7t893Jb7cPQCymX1D/Jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+  "projectFilePath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\15992\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.directoryservices\\6.0.0\\system.directoryservices.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\15992\\.nuget\\packages\\winformanimation\\1.3.0\\winformanimation.1.3.0.nupkg.sha512",
-    "C:\\Users\\15992\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.21\\microsoft.netcore.app.runtime.win-x64.3.1.21.nupkg.sha512",
-    "C:\\Users\\15992\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.21\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.21.nupkg.sha512",
-    "C:\\Users\\15992\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.21\\microsoft.aspnetcore.app.runtime.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\15992\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.24\\microsoft.netcore.app.runtime.win-x64.3.1.24.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.24\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.24.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.24\\microsoft.aspnetcore.app.runtime.win-x64.3.1.24.nupkg.sha512"
   ],
   "logs": [
     {

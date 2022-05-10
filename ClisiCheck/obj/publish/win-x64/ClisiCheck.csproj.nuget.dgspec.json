@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj": {}
+    "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj": {}
   },
   "projects": {
-    "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj": {
+    "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+        "projectUniqueName": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
         "projectName": "ClisiCheck",
-        "projectPath": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+        "projectPath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
         "packagesPath": "C:\\Users\\15992\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\15992\\source\\repos\\ClisiCheck\\ClisiCheck\\obj\\publish\\win-x64\\",
+        "outputPath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\15992\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "CircularProgressBar": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -58,15 +62,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[3.1.21, 3.1.21]"
+              "version": "[3.1.24, 3.1.24]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[3.1.21, 3.1.21]"
+              "version": "[3.1.24, 3.1.24]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[3.1.21, 3.1.21]"
+              "version": "[3.1.24, 3.1.24]"
             }
           ],
           "frameworkReferences": {
@@ -77,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

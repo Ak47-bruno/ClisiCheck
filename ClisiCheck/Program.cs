@@ -17,7 +17,8 @@ namespace ClisiCheck
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new start());
+            //Application.Run(new start());
+            Application.Run(new Login());
         }
     }
 }

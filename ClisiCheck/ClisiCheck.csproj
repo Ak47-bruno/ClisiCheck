@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.2.0" />
+    <PackageReference Include="System.DirectoryServices" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

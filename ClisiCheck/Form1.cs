@@ -44,6 +44,11 @@ namespace ClisiCheck
             
         }
 
+        public void userLabel(string userName)
+        {
+            lblUserName.Text = "Logado com: " + userName;
+        }
+
         private void start_Load(object sender, EventArgs e)
         {
 
@@ -61,7 +66,7 @@ namespace ClisiCheck
             listBoxResult.Items.Clear();
             btnDash.BackColor = Color.FromArgb(46, 51, 73);
         }
-
+               
         private void btnCaixa_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnCaixa.Height;
@@ -113,6 +118,7 @@ namespace ClisiCheck
 
         private void btnChek_Click(object sender, EventArgs e)
         {
+            btnChek.PointToScreen(panel9.Location);
             listBoxResult.Controls.Clear();
             listBoxResult.Items.Clear();
             progressBar.Value = 0;
@@ -141,7 +147,7 @@ namespace ClisiCheck
             switch (lblModo.Text)
             {
                 case "Escritório":
-                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "CutePDF", "FortiClient VPN", "Java", "LibreOffice", "Adobe", "Acrobat Reader DC", "Ivanti Endpoint" };
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN" };
                     break;
                 case "Caixa":
                     listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
@@ -149,9 +155,9 @@ namespace ClisiCheck
                 case "Gerência":
                     break;
             }
-            
+
             //Verifica todos os softwares no computador
-            List<String> source = new List<string> { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall", "SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall"};
+            List<String> source = new List<string> { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall", "SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall" };
             foreach (var s in source)
             {
                 key = Registry.LocalMachine.OpenSubKey($@"{s}");
@@ -179,10 +185,18 @@ namespace ClisiCheck
             }
 
             //Verifica se os softwares estão instalados
+            for (int g = 0; g < listProgram.Count; g++)
+            {
+                if (!list.Exists(e => e.Contains(listProgram[g])))
+                {
+                    listBoxResult.Items.Add(listProgram[g]);
+                }
+            }
+            
             if (!list.Exists(e => e.Contains("SAP GUI for Windows")))
             {
-                    listBoxResult.Items.Add("SAP GUI for Windows");
-                                
+                listBoxResult.Items.Add("SAP GUI for Windows");
+
             }
             else
             {
@@ -191,34 +205,21 @@ namespace ClisiCheck
                     listBoxResult.Items.Add("SAP GUI Desatualizado");
                 }
             }
-            
+
             if (!list.Exists(e => e.Contains("McAfee Agent")))
-            {               
-                    listBoxResult.Items.Add("McAfee Agente");                           
+            {
+                listBoxResult.Items.Add("McAfee Agente");
             }
             else
             {
-                if (!list.Exists(e => e.Contains("McAfee Agent Versão 5.7.5.504")))
+                if (!list.Exists(e => e.Contains("McAfee Agent Versão 5.7.6.251")))
                 {
                     listBoxResult.Items.Add("McAfee Agent Desatualizado");
                 }
             }
 
-            for (int g = 0; g < listProgram.Count; g++)
-            {   
-                if (!list.Exists(e => e.Contains(listProgram[g])))
-                {
-                    if(listProgram[g] == "Ivanti Endpoint")
-                    {
-                        listBoxResult.Items.Add("Landesk");
-                    }
-                    else
-                    {
-                        listBoxResult.Items.Add(listProgram[g]);
-                    }                    
-                }
-            }
             
+
             for (int f = 0; f < list.Count; f++)
             {
                 //listBoxResult.Items.Add(list[f]);
@@ -280,8 +281,8 @@ namespace ClisiCheck
                 listBoxResult.Items.Add("Atalho SAC");
             }
 
-             path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
-             result = File.Exists(path);
+            path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+            result = File.Exists(path);
             if (!result)
             {
                 listBoxResult.Items.Add("Atalho CAIXA NFCE");
@@ -323,6 +324,15 @@ namespace ClisiCheck
                 listBoxResult.Items.Add("Bemol.ini");
             }
 
+            path = @"C:\Program Files (x86)\LANDesk\LDClient\LANDeskPortalManager.exe";
+            result = File.Exists(path);
+            string pathDirectory = @"C:\Program Files (x86)\LANDesk";
+            bool resultDirectory = Directory.Exists(pathDirectory);
+            if (result != true || resultDirectory != true)
+            {
+                listBoxResult.Items.Add("Landesk");
+            }
+
             // string command = "/C notepad.exe";
             // Process.Start("cmd.exe", command);
         }
@@ -331,15 +341,15 @@ namespace ClisiCheck
         public void hostName()
         {
 
-           var nome = Environment.MachineName;
-           // var dominio = Environment.UserDomainName;
-           var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+            var nome = Environment.MachineName;
+            // var dominio = Environment.UserDomainName;
+            var nomeCompleto = Dns.GetHostEntry(nome).HostName;
 
-            if (!nomeCompleto.Equals(nome+".bemol.local"))
+            if (!nomeCompleto.Equals(nome + ".bemol.local"))
             {
                 listBoxResult.Items.Add("Inserir no Domínio bemol.local");
             }
-            
+
 
         }
 
@@ -390,5 +400,7 @@ namespace ClisiCheck
                 }
             }
         }
+
+       
     }
 }

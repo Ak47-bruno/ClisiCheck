@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj": {}
+    "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj": {
+    "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+        "projectUniqueName": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
         "projectName": "ClisiCheck",
-        "projectPath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
-        "packagesPath": "C:\\Users\\HatchBack\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\obj\\",
+        "projectPath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
+        "packagesPath": "C:\\Users\\15992\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HatchBack\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\15992\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +43,10 @@
             "CircularProgressBar": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

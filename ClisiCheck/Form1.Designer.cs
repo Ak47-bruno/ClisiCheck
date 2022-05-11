@@ -101,6 +101,7 @@ namespace ClisiCheck
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersion.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblVersion.Location = new System.Drawing.Point(7, 22);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVersion.Name = "lblVersion";
@@ -111,7 +112,8 @@ namespace ClisiCheck
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(7, 0);
+            this.lblUserName.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblUserName.Location = new System.Drawing.Point(7, 7);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(62, 15);
@@ -323,6 +325,8 @@ namespace ClisiCheck
             this.progressBar.InnerWidth = -1;
             this.progressBar.Location = new System.Drawing.Point(31, 3);
             this.progressBar.MarqueeAnimationSpeed = 500;
+            this.progressBar.MaximumSize = new System.Drawing.Size(180, 180);
+            this.progressBar.MinimumSize = new System.Drawing.Size(180, 180);
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.Gray;
             this.progressBar.OuterMargin = -25;
@@ -379,14 +383,15 @@ namespace ClisiCheck
             // listBoxResult
             // 
             this.listBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxResult.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listBoxResult.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listBoxResult.ForeColor = System.Drawing.Color.RoyalBlue;
             this.listBoxResult.FormattingEnabled = true;
             this.listBoxResult.HorizontalScrollbar = true;
-            this.listBoxResult.ItemHeight = 21;
+            this.listBoxResult.ItemHeight = 19;
             this.listBoxResult.Location = new System.Drawing.Point(3, 41);
+            this.listBoxResult.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.listBoxResult.Name = "listBoxResult";
-            this.listBoxResult.Size = new System.Drawing.Size(340, 357);
+            this.listBoxResult.Size = new System.Drawing.Size(340, 342);
             this.listBoxResult.TabIndex = 0;
             this.listBoxResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxResult_MouseDoubleClick);
             // 
@@ -416,9 +421,7 @@ namespace ClisiCheck
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;

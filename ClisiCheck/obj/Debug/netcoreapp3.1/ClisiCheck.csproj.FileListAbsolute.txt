@@ -139,3 +139,19 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Debug\netcoreapp3.1\Cli
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Debug\netcoreapp3.1\ClisiCheck.pdb
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Debug\netcoreapp3.1\ClisiCheck.genruntimeconfig.cache
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Debug\netcoreapp3.1\ClisiCheck.Login.resources
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.IO.FileSystem.AccessControl.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.FileSystem.AccessControl.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\HatchBack\Documents\ClisiCheck\ClisiCheck\obj\Debug\netcoreapp3.1\ClisiCheck.Login.resources

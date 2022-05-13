@@ -42,7 +42,6 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\r
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.AssemblyReference.cache
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.start.resources
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.Login.resources
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.Programas.resources
@@ -56,3 +55,8 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\C
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.pdb
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.genruntimeconfig.cache
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\OSVersionExt.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\Interop.WUApiLib.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.ResolveComReference.cache
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\Interop.WUApiLib.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.AssemblyReference.cache

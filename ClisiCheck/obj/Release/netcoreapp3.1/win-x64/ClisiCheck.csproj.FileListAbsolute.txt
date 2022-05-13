@@ -1001,3 +1001,8 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\w
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\ClisiCheck.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\ClisiCheck.pdb
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\ClisiCheck.genruntimeconfig.cache
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\OSVersionExt.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\Interop.WUApiLib.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\Interop.WUApiLib.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\ClisiCheck.csproj.ResolveComReference.cache
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\win-x64\ClisiCheck.csproj.AssemblyReference.cache

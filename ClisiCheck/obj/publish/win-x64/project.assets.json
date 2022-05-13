@@ -32,6 +32,15 @@
           }
         }
       },
+      "OSVersionExt/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/OSVersionExt.dll": {}
+        },
+        "runtime": {
+          "lib/net40/OSVersionExt.dll": {}
+        }
+      },
       "System.DirectoryServices/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -209,6 +218,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "OSVersionExt/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/OSVersionExt.dll": {}
+        },
+        "runtime": {
+          "lib/net40/OSVersionExt.dll": {}
+        }
+      },
       "System.DirectoryServices/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -361,6 +379,18 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "OSVersionExt/1.0.1": {
+      "sha512": "9Evix29hQjpWVu5WskVMMY870Vr35gReawsl481LcpcNdY2yxvBwUCQAfns3H3Guzjl6BJk0TVXP7/NNrDIHDg==",
+      "type": "package",
+      "path": "osversionext/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/OSVersionExt.dll",
+        "osversionext.1.0.1.nupkg.sha512",
+        "osversionext.nuspec"
       ]
     },
     "System.DirectoryServices/6.0.0": {
@@ -629,6 +659,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "CircularProgressBar >= 2.2.0",
+      "OSVersionExt >= 1.0.1",
       "System.DirectoryServices >= 6.0.0"
     ]
   },
@@ -674,6 +705,10 @@
           "CircularProgressBar": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "OSVersionExt": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "System.DirectoryServices": {
             "target": "Package",
@@ -728,6 +763,16 @@
       "warningLevel": 1,
       "message": "O pacote 'CircularProgressBar 2.2.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'OSVersionExt 1.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "OSVersionExt",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

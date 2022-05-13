@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GnUzMo6yaVEbtVo8WZucUW2/f4+AHUmZ6+rHsEe/ty/2ZXKqZmTTsNNVLsQihocgKV7t893Jb7cPQCymX1D/Jg==",
+  "dgSpecHash": "NNTBbIchoTPGxafTGzXetICfwUhlN9Q6wYfLEBv21zL70vdiXvbzQknXpVDioeA/NlX7D74rCe6OqRao92I9lA==",
   "success": true,
   "projectFilePath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\15992\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
     "C:\\Users\\15992\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\osversionext\\1.0.1\\osversionext.1.0.1.nupkg.sha512",
     "C:\\Users\\15992\\.nuget\\packages\\system.directoryservices\\6.0.0\\system.directoryservices.6.0.0.nupkg.sha512",
     "C:\\Users\\15992\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\15992\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
@@ -25,6 +26,16 @@
       "warningLevel": 1,
       "message": "O pacote 'CircularProgressBar 2.2.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'OSVersionExt 1.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "OSVersionExt",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

@@ -1,19 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "5+e9qSUDEDR+RUtDU/NZH9eaCq5iRyTpPnSULbk1T9lA5a65AGx6Tm4uUhE7oBEH26KIAoSLqMemwFE+YS6LGg==",
+  "dgSpecHash": "QXETmRO7ODGI/OMaxmIV3qr5HRAdbZCN/IgaN0punebcJOf1fWsFxGxbW75lzmimDvzvgiIY10nHGl7GWT/Kfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HatchBack\\Documents\\ClisiCheck\\ClisiCheck\\ClisiCheck.csproj",
+  "projectFilePath": "C:\\Users\\15992\\Documents\\ClisiCheck 1.0.0\\ClisiCheck\\ClisiCheck.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HatchBack\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.directoryservices\\6.0.0\\system.directoryservices.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\HatchBack\\.nuget\\packages\\winformanimation\\1.3.0\\winformanimation.1.3.0.nupkg.sha512"
+    "C:\\Users\\15992\\.nuget\\packages\\circularprogressbar\\2.2.0\\circularprogressbar.2.2.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\osversionext\\1.0.1\\osversionext.1.0.1.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.directoryservices\\6.0.0\\system.directoryservices.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\15992\\.nuget\\packages\\winformanimation\\1.3.0\\winformanimation.1.3.0.nupkg.sha512"
   ],
   "logs": [
     {
@@ -22,6 +23,16 @@
       "warningLevel": 1,
       "message": "O pacote 'CircularProgressBar 2.2.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "CircularProgressBar",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'OSVersionExt 1.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "OSVersionExt",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

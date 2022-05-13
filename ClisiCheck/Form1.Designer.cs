@@ -304,18 +304,18 @@ namespace ClisiCheck
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.AutoSize = true;
             this.panel9.Controls.Add(this.progressBar);
-            this.panel9.Location = new System.Drawing.Point(2, 6);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(231, 189);
+            this.panel9.Size = new System.Drawing.Size(235, 197);
             this.panel9.TabIndex = 2;
             // 
             // progressBar
             // 
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.progressBar.AnimationSpeed = 500;
             this.progressBar.BackColor = System.Drawing.Color.White;
             this.progressBar.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -323,10 +323,10 @@ namespace ClisiCheck
             this.progressBar.InnerColor = System.Drawing.Color.White;
             this.progressBar.InnerMargin = 2;
             this.progressBar.InnerWidth = -1;
-            this.progressBar.Location = new System.Drawing.Point(31, 3);
+            this.progressBar.Location = new System.Drawing.Point(33, 3);
             this.progressBar.MarqueeAnimationSpeed = 500;
             this.progressBar.MaximumSize = new System.Drawing.Size(180, 180);
-            this.progressBar.MinimumSize = new System.Drawing.Size(180, 180);
+            this.progressBar.MinimumSize = new System.Drawing.Size(130, 130);
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.Gray;
             this.progressBar.OuterMargin = -25;
@@ -353,9 +353,9 @@ namespace ClisiCheck
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.pnlResult);
-            this.panel5.Location = new System.Drawing.Point(445, 17);
+            this.panel5.Location = new System.Drawing.Point(442, 17);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(343, 422);
+            this.panel5.Size = new System.Drawing.Size(346, 422);
             this.panel5.TabIndex = 3;
             // 
             // pnlResult
@@ -366,7 +366,7 @@ namespace ClisiCheck
             this.pnlResult.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlResult.Location = new System.Drawing.Point(0, 0);
             this.pnlResult.Name = "pnlResult";
-            this.pnlResult.Size = new System.Drawing.Size(343, 400);
+            this.pnlResult.Size = new System.Drawing.Size(346, 400);
             this.pnlResult.TabIndex = 1;
             // 
             // label4
@@ -425,7 +425,7 @@ namespace ClisiCheck
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(90, 6);
+            this.label3.Location = new System.Drawing.Point(86, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 1;
@@ -466,6 +466,7 @@ namespace ClisiCheck
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.pnlResult.ResumeLayout(false);

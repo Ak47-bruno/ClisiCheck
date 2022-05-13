@@ -12,7 +12,8 @@ using System.Diagnostics;
 
 using System.Linq;
 using System.Net;
-
+using OSVersionExtension;
+using WUApiLib;
 //TO DO
 // Verificar versionanemento MCAfee, SAP
 // Outras versões Loja, Gerência, 
@@ -147,7 +148,7 @@ namespace ClisiCheck
             switch (lblModo.Text)
             {
                 case "Escritório":
-                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN" };
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN"};
                     break;
                 case "Caixa":
                     listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
@@ -183,6 +184,8 @@ namespace ClisiCheck
                     }
                 }
             }
+            //Verifica se está no domínio Bemol
+            hostName();
 
             //Verifica se os softwares estão instalados
             for (int g = 0; g < listProgram.Count; g++)
@@ -269,7 +272,9 @@ namespace ClisiCheck
 
             checkPasta();
             caixaCheck();
-            hostName();
+            editionWindows();
+            InstalledUpdates();
+            UpdatesAvailable();
         }
 
         public void caixaCheck()
@@ -352,6 +357,56 @@ namespace ClisiCheck
 
 
         }
+
+        //Verifica a versão do windows 10.
+        public void editionWindows()
+        {
+            string tipoWindows = (OSVersion.GetOperatingSystem()).ToString();
+            if (tipoWindows == "Windows10")
+            {
+                string versaoWin = OSVersion.MajorVersion10Properties().DisplayVersion;
+                if (versaoWin != "21H2")
+                {
+                    listBoxResult.Items.Add("Atualizar o Windows para 21H2");
+                }
+            }
+               
+        }
+
+        //Verifica se tem atualizações instaladas
+        public void InstalledUpdates()
+        {
+            UpdateSession UpdateSession = new UpdateSession();
+            IUpdateSearcher UpdateSearchResult = UpdateSession.CreateUpdateSearcher();
+            UpdateSearchResult.Online = true;//checks for updates online
+            ISearchResult SearchResults = UpdateSearchResult.Search("IsInstalled=1 AND IsHidden=0");
+            //for the above search criteria refer to 
+            //http://msdn.microsoft.com/en-us/library/windows/desktop/aa386526(v=VS.85).aspx
+            //Check the remakrs section
+
+            foreach (IUpdate x in SearchResults.Updates)
+            {
+                //listBoxResult.Items.Add(x.Title);
+            }
+        }
+
+        //Verifica se tem atualizações pendentes
+        public void UpdatesAvailable()
+        {
+            UpdateSession UpdateSession = new UpdateSession();
+            IUpdateSearcher UpdateSearchResult = UpdateSession.CreateUpdateSearcher();
+            UpdateSearchResult.Online = true;//checks for updates online
+            ISearchResult SearchResults = UpdateSearchResult.Search("IsInstalled=0 AND IsPresent=0");
+            //for the above search criteria refer to 
+            //http://msdn.microsoft.com/en-us/library/windows/desktop/aa386526(v=VS.85).aspx
+            //Check the remakrs section
+
+            foreach (IUpdate x in SearchResults.Updates)
+            {
+                listBoxResult.Items.Add(x.Title);
+            }
+        }
+
 
         //Move a janela 
         private void start_MouseDown(object sender, MouseEventArgs e)

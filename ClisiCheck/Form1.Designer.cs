@@ -48,6 +48,8 @@ namespace ClisiCheck
             this.btnChek = new ClisiCheck.CircularButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.txtLog = new System.Windows.Forms.RichTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.progressBar = new CircularProgressBar.CircularProgressBar();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -64,6 +66,7 @@ namespace ClisiCheck
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pnlResult.SuspendLayout();
@@ -92,7 +95,7 @@ namespace ClisiCheck
             this.panel10.Controls.Add(this.lblVersion);
             this.panel10.Controls.Add(this.lblUserName);
             this.panel10.Location = new System.Drawing.Point(0, 400);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(196, 39);
             this.panel10.TabIndex = 4;
@@ -251,7 +254,7 @@ namespace ClisiCheck
             // 
             this.panel8.Controls.Add(this.btnChek);
             this.panel8.Location = new System.Drawing.Point(2, 30);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(231, 119);
             this.panel8.TabIndex = 2;
@@ -272,7 +275,7 @@ namespace ClisiCheck
             this.btnChek.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChek.ForeColor = System.Drawing.Color.Transparent;
             this.btnChek.Location = new System.Drawing.Point(11, 5);
-            this.btnChek.Margin = new System.Windows.Forms.Padding(1);
+            this.btnChek.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnChek.MaximumSize = new System.Drawing.Size(214, 109);
             this.btnChek.MinimumSize = new System.Drawing.Size(214, 109);
             this.btnChek.Name = "btnChek";
@@ -296,21 +299,44 @@ namespace ClisiCheck
             // 
             this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Location = new System.Drawing.Point(204, 242);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(235, 197);
             this.panel4.TabIndex = 3;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.txtLog);
+            this.panel11.Location = new System.Drawing.Point(0, 158);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(235, 39);
+            this.panel11.TabIndex = 3;
+            // 
+            // txtLog
+            // 
+            this.txtLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLog.Location = new System.Drawing.Point(0, 0);
+            this.txtLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLog.Name = "txtLog";
+            this.txtLog.ReadOnly = true;
+            this.txtLog.Size = new System.Drawing.Size(235, 39);
+            this.txtLog.TabIndex = 0;
+            this.txtLog.Text = "";
+            // 
             // panel9
             // 
             this.panel9.AutoSize = true;
             this.panel9.Controls.Add(this.progressBar);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(37, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(235, 197);
+            this.panel9.Size = new System.Drawing.Size(166, 156);
             this.panel9.TabIndex = 2;
             // 
             // progressBar
@@ -323,10 +349,8 @@ namespace ClisiCheck
             this.progressBar.InnerColor = System.Drawing.Color.White;
             this.progressBar.InnerMargin = 2;
             this.progressBar.InnerWidth = -1;
-            this.progressBar.Location = new System.Drawing.Point(42, 3);
+            this.progressBar.Location = new System.Drawing.Point(8, 9);
             this.progressBar.MarqueeAnimationSpeed = 500;
-            this.progressBar.MaximumSize = new System.Drawing.Size(180, 180);
-            this.progressBar.MinimumSize = new System.Drawing.Size(130, 130);
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.Gray;
             this.progressBar.OuterMargin = -25;
@@ -334,7 +358,7 @@ namespace ClisiCheck
             this.progressBar.ProgressColor = System.Drawing.Color.RoyalBlue;
             this.progressBar.ProgressWidth = 6;
             this.progressBar.SecondaryFont = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.progressBar.Size = new System.Drawing.Size(150, 150);
+            this.progressBar.Size = new System.Drawing.Size(150, 138);
             this.progressBar.StartAngle = 270;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -391,7 +415,7 @@ namespace ClisiCheck
             this.listBoxResult.Location = new System.Drawing.Point(3, 41);
             this.listBoxResult.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.listBoxResult.Name = "listBoxResult";
-            this.listBoxResult.Size = new System.Drawing.Size(340, 380);
+            this.listBoxResult.Size = new System.Drawing.Size(340, 361);
             this.listBoxResult.TabIndex = 0;
             this.listBoxResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxResult_MouseDoubleClick);
             // 
@@ -425,7 +449,7 @@ namespace ClisiCheck
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(83, 6);
+            this.label3.Location = new System.Drawing.Point(86, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 1;
@@ -467,6 +491,7 @@ namespace ClisiCheck
             this.panel8.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.pnlResult.ResumeLayout(false);
@@ -507,5 +532,7 @@ namespace ClisiCheck
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.RichTextBox txtLog;
     }
 }

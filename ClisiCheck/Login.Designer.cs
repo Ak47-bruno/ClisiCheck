@@ -47,18 +47,16 @@ namespace ClisiCheck
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.lblSenha);
             this.panel1.Controls.Add(this.lblUser);
-            this.panel1.Location = new System.Drawing.Point(8, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(11, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 183);
+            this.panel1.Size = new System.Drawing.Size(451, 274);
             this.panel1.TabIndex = 0;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(4, 115);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmar.Location = new System.Drawing.Point(6, 192);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(103, 34);
+            this.btnConfirmar.Size = new System.Drawing.Size(147, 57);
             this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -67,30 +65,27 @@ namespace ClisiCheck
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSenha.Location = new System.Drawing.Point(4, 76);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSenha.Location = new System.Drawing.Point(6, 127);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(311, 29);
+            this.txtSenha.Size = new System.Drawing.Size(443, 39);
             this.txtSenha.TabIndex = 3;
             // 
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.Location = new System.Drawing.Point(4, 21);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser.Location = new System.Drawing.Point(6, 35);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(311, 29);
+            this.txtUser.Size = new System.Drawing.Size(443, 39);
             this.txtUser.TabIndex = 2;
             // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSenha.Location = new System.Drawing.Point(2, 55);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSenha.Location = new System.Drawing.Point(3, 92);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(53, 21);
+            this.lblSenha.Size = new System.Drawing.Size(80, 32);
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha";
             // 
@@ -98,24 +93,22 @@ namespace ClisiCheck
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUser.Location = new System.Drawing.Point(2, 0);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUser.Location = new System.Drawing.Point(3, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(64, 21);
+            this.lblUser.Size = new System.Drawing.Size(94, 32);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Usuário";
             // 
             // Login
             // 
             this.AcceptButton = this.btnConfirmar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(333, 202);
+            this.ClientSize = new System.Drawing.Size(476, 306);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

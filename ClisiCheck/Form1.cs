@@ -139,6 +139,9 @@ namespace ClisiCheck
 
         public void escritorioCheck()
         {
+            //Verificando programas
+            txtLog.AppendText("Verificando Programas\n");
+
             string displayName;
             string displayVersion;
             List<string> list = new List<string>();
@@ -273,7 +276,7 @@ namespace ClisiCheck
             checkPasta();
             caixaCheck();
             editionWindows();
-            InstalledUpdates();
+            //InstalledUpdates();
             UpdatesAvailable();
         }
 
@@ -344,7 +347,8 @@ namespace ClisiCheck
 
         //método para verificar o nome do computador e o dominio
         public void hostName()
-        {
+        {   
+             
 
             var nome = Environment.MachineName;
             // var dominio = Environment.UserDomainName;
@@ -393,6 +397,8 @@ namespace ClisiCheck
         //Verifica se tem atualizações pendentes
         public void UpdatesAvailable()
         {
+            txtLog.AppendText("Verificando Atualizações do Windows");
+
             UpdateSession UpdateSession = new UpdateSession();
             IUpdateSearcher UpdateSearchResult = UpdateSession.CreateUpdateSearcher();
             UpdateSearchResult.Online = true;//checks for updates online
@@ -407,6 +413,11 @@ namespace ClisiCheck
             }
         }
 
+        public void logsClear()
+        {
+            txtLog.Clear();
+        }
+        
 
         //Move a janela 
         private void start_MouseDown(object sender, MouseEventArgs e)

@@ -95,7 +95,7 @@ namespace ClisiCheck
             this.panel10.Controls.Add(this.lblVersion);
             this.panel10.Controls.Add(this.lblUserName);
             this.panel10.Location = new System.Drawing.Point(0, 400);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(196, 39);
             this.panel10.TabIndex = 4;
@@ -254,7 +254,7 @@ namespace ClisiCheck
             // 
             this.panel8.Controls.Add(this.btnChek);
             this.panel8.Location = new System.Drawing.Point(2, 30);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(231, 119);
             this.panel8.TabIndex = 2;
@@ -275,7 +275,7 @@ namespace ClisiCheck
             this.btnChek.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChek.ForeColor = System.Drawing.Color.Transparent;
             this.btnChek.Location = new System.Drawing.Point(11, 5);
-            this.btnChek.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnChek.Margin = new System.Windows.Forms.Padding(1);
             this.btnChek.MaximumSize = new System.Drawing.Size(214, 109);
             this.btnChek.MinimumSize = new System.Drawing.Size(214, 109);
             this.btnChek.Name = "btnChek";
@@ -310,19 +310,19 @@ namespace ClisiCheck
             // 
             this.panel11.Controls.Add(this.txtLog);
             this.panel11.Location = new System.Drawing.Point(0, 158);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(235, 39);
             this.panel11.TabIndex = 3;
             // 
             // txtLog
             // 
-            this.txtLog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtLog.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLog.Location = new System.Drawing.Point(0, 0);
-            this.txtLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLog.Margin = new System.Windows.Forms.Padding(2);
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
             this.txtLog.Size = new System.Drawing.Size(235, 39);
@@ -334,7 +334,7 @@ namespace ClisiCheck
             this.panel9.AutoSize = true;
             this.panel9.Controls.Add(this.progressBar);
             this.panel9.Location = new System.Drawing.Point(37, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(166, 156);
             this.panel9.TabIndex = 2;
@@ -457,6 +457,7 @@ namespace ClisiCheck
             // 
             // start
             // 
+            this.AcceptButton = this.btnChek;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;

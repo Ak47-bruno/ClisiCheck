@@ -20,7 +20,7 @@ using WUApiLib;
 // Instalação dos programas.
 namespace ClisiCheck
 {
-    //Código para o botao checkar ficar redondo
+    //----------------------------Código para o botao checkar ficar redondo---------------------------------------
     public partial class start : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -34,6 +34,9 @@ namespace ClisiCheck
       int nWidthEllipse,
       int nHeightEllipse
   );
+        //-------------------------Código para o botao checkar ficar redondo---------------------------------------
+
+
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
 
@@ -122,6 +125,7 @@ namespace ClisiCheck
             btnChek.PointToScreen(panel9.Location);
             listBoxResult.Controls.Clear();
             listBoxResult.Items.Clear();
+            logsClear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
             switch (lblModo.Text)
@@ -140,7 +144,7 @@ namespace ClisiCheck
         public void escritorioCheck()
         {
             //Verificando programas
-            txtLog.AppendText("Verificando Programas\n");
+            txtLog.AppendText(" Verificando Programas\n");
 
             string displayName;
             string displayVersion;
@@ -187,10 +191,12 @@ namespace ClisiCheck
                     }
                 }
             }
+
+
             //Verifica se está no domínio Bemol
             hostName();
 
-            //Verifica se os softwares estão instalados
+            //Verifica se os softwares ESPECÍFICOS estão instalados
             for (int g = 0; g < listProgram.Count; g++)
             {
                 if (!list.Exists(e => e.Contains(listProgram[g])))
@@ -223,55 +229,7 @@ namespace ClisiCheck
                     listBoxResult.Items.Add("McAfee Agent Desatualizado");
                 }
             }
-
             
-
-            for (int f = 0; f < list.Count; f++)
-            {
-                //listBoxResult.Items.Add(list[f]);
-
-
-                //if ((list[f]).Contains("7-Zip"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("Carsybde"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("Google Drive"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("CutePDF"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("FortiClient VPN"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("Java"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("LibreOffice"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("Adobe Acrobat Reader DC"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("SAP GUI for Windows"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-                //else if ((list[f]).Contains("McAfee Agent"))
-                //{
-                //    listBoxResult.Items.Add(list[f]);
-                //}
-            }
 
             checkPasta();
             caixaCheck();
@@ -280,6 +238,7 @@ namespace ClisiCheck
             UpdatesAvailable();
         }
 
+        //Método para checar atalhos
         public void caixaCheck()
         {
             string path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE - atalho - Atalho.lnk";
@@ -297,6 +256,8 @@ namespace ClisiCheck
             }
         }
 
+
+        //Método para checar pastas e arquivos
         public void checkPasta()
         {
             string path = "C:\\Program Files\\";
@@ -348,8 +309,7 @@ namespace ClisiCheck
         //método para verificar o nome do computador e o dominio
         public void hostName()
         {   
-             
-
+            
             var nome = Environment.MachineName;
             // var dominio = Environment.UserDomainName;
             var nomeCompleto = Dns.GetHostEntry(nome).HostName;
@@ -397,20 +357,35 @@ namespace ClisiCheck
         //Verifica se tem atualizações pendentes
         public void UpdatesAvailable()
         {
-            txtLog.AppendText("Verificando Atualizações do Windows");
-
-            UpdateSession UpdateSession = new UpdateSession();
-            IUpdateSearcher UpdateSearchResult = UpdateSession.CreateUpdateSearcher();
-            UpdateSearchResult.Online = true;//checks for updates online
-            ISearchResult SearchResults = UpdateSearchResult.Search("IsInstalled=0 AND IsPresent=0");
-            //for the above search criteria refer to 
-            //http://msdn.microsoft.com/en-us/library/windows/desktop/aa386526(v=VS.85).aspx
-            //Check the remakrs section
-
-            foreach (IUpdate x in SearchResults.Updates)
+            txtLog.AppendText(" Verificando Atualizações do Windows");
+            try
             {
-                listBoxResult.Items.Add(x.Title);
+                UpdateSession UpdateSession = new UpdateSession();
+                IUpdateSearcher UpdateSearchResult = UpdateSession.CreateUpdateSearcher();
+                UpdateSearchResult.Online = true;//checks for updates online
+                ISearchResult SearchResults = UpdateSearchResult.Search("IsInstalled=0 AND IsPresent=0");
+                //for the above search criteria refer to 
+                //http://msdn.microsoft.com/en-us/library/windows/desktop/aa386526(v=VS.85).aspx
+                //Check the remakrs section
+                if (SearchResults.Updates.Count == 0)
+                {
+                    txtLog.Text = " Windows Atualizado";
+                }
+                else
+                {
+                    listBoxResult.Items.Add("Windows Possúi Atualizações");
+                    //foreach (IUpdate x in SearchResults.Updates)
+                    //{
+                    //    listBoxResult.Items.Add(x.Title);
+                    //}
+                }
             }
+            catch
+            {
+                txtLog.Text = "Erro Ao Procurar Atualizações Do Windows\nVerifique A Conexão Com A Internet.";
+            }
+          
+           
         }
 
         public void logsClear()

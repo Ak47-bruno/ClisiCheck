@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using Microsoft.Win32;
 using System.Diagnostics;
-
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net;
 using OSVersionExtension;
@@ -128,37 +128,56 @@ namespace ClisiCheck
             logsClear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
+
+            //Lista de Programas
+            List<string> listProgram = new List<string>();
             switch (lblModo.Text)
             {
                 case "Escritório":
-                    escritorioCheck();
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN", "Dell Command"};
+                    escritorioCheck(listProgram);
+                    checkPasta();
+                    editionWindows();
+                    UpdatesAvailable();
                     break;
                 case "Caixa":
-                    escritorioCheck();
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint", "Gertec", "Dell Command" };                    
+                    escritorioCheck(listProgram);
+                    impressoraCheck();
+                    checkPasta();
+                    atalhosCheck();
+                    editionWindows();
+                    UpdatesAvailable();
                     break;
                 case "Gerência":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN", "Digifort Enterprise", "Gertec", "Dell Command" };
+                    escritorioCheck(listProgram);
+                    impressoraCheck();
+                    checkPasta();
+                    atalhosCheck();
+                    editionWindows();
+                    UpdatesAvailable();
                     break;
             }
         }
 
-        public void escritorioCheck()
+        public void escritorioCheck(List<String> programas)
         {
-            //Verificando programas
-            txtLog.AppendText(" Verificando Programas\n");
-
+           
             string displayName;
             string displayVersion;
+            //Lista de todos os programas instalados
             List<string> list = new List<string>();
-            List<string> listVersion = new List<string>();
-            List<string> listProgram = new List<string>();
+            //Lista de programas que contem versão
+            List<string> listVersion = new List<string>();            
             RegistryKey key;
             switch (lblModo.Text)
             {
                 case "Escritório":
-                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN"};
+                   // listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN"};
                     break;
                 case "Caixa":
-                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
+                    //listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
                     break;
                 case "Gerência":
                     break;
@@ -197,11 +216,11 @@ namespace ClisiCheck
             hostName();
 
             //Verifica se os softwares ESPECÍFICOS estão instalados
-            for (int g = 0; g < listProgram.Count; g++)
+            for (int g = 0; g < programas.Count; g++)
             {
-                if (!list.Exists(e => e.Contains(listProgram[g])))
+                if (!list.Exists(e => e.Contains(programas[g])))
                 {
-                    listBoxResult.Items.Add(listProgram[g]);
+                    listBoxResult.Items.Add(programas[g]);
                 }
             }
             
@@ -228,34 +247,82 @@ namespace ClisiCheck
                 {
                     listBoxResult.Items.Add("McAfee Agent Desatualizado");
                 }
-            }
-            
+            }          
 
-            checkPasta();
-            caixaCheck();
-            editionWindows();
-            //InstalledUpdates();
-            UpdatesAvailable();
+            
+                       
         }
 
         //Método para checar atalhos
-        public void caixaCheck()
+        public void atalhosCheck()
         {
-            string path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE - atalho - Atalho.lnk";
+
+            //path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+            //result = File.Exists(path);
+            //if (!result)
+            //{
+            //    listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
+            //}
+            string path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
             bool result = File.Exists(path);
-            if (!result)
-            {
-                listBoxResult.Items.Add("Atalho SAC");
+            switch (lblModo.Text)
+            {                
+                case "Caixa":
+
+                    path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Caixa_NFCE.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    break;
+
+                case "Gerência":
+
+                    path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Caixa_NFCE.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    break;
             }
 
-            path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
-            result = File.Exists(path);
-            if (!result)
-            {
-                listBoxResult.Items.Add("Atalho CAIXA NFCE");
-            }
         }
 
+        public void impressoraCheck()
+        {
+            List<String> impressoras = new List<string>();
+            foreach (String impressora in PrinterSettings.InstalledPrinters)
+            {
+                impressoras.Append(impressora);                
+            }
+            if (!impressoras.Exists(e => e.Contains("CaixaNFCE")))
+            {
+                listBoxResult.Items.Add("Impressora CaixaNFCE");
+            }
+        }
 
         //Método para checar pastas e arquivos
         public void checkPasta()
@@ -281,7 +348,7 @@ namespace ClisiCheck
             progressBar.Text = progressBar.Value.ToString() + "%";
             if (result != true)
             {
-                listBoxResult.Items.Add("Pasta Oracle");
+                listBoxResult.Items.Add(@"Pasta C:\Oracle");
             }
 
             path = "C:\\Windows\\Bemol.ini";
@@ -302,6 +369,26 @@ namespace ClisiCheck
                 listBoxResult.Items.Add("Landesk");
             }
 
+
+            switch (lblModo.Text)
+            {                
+                case "Caixa":
+                    path = "C:\\EFCEBEMOL";
+                    result = Directory.Exists(path);
+                    if (result != true)
+                    {
+                        listBoxResult.Items.Add(@"Pasta C:\EFCEBEMOL");
+                    }
+                    break;
+                case "Gerência":
+                    path = "C:\\EFCEBEMOL";
+                    result = Directory.Exists(path);
+                    if (result != true)
+                    {
+                        listBoxResult.Items.Add(@"Pasta C:\EFCEBEMOL");
+                    }
+                    break;
+            }
             // string command = "/C notepad.exe";
             // Process.Start("cmd.exe", command);
         }
@@ -369,7 +456,12 @@ namespace ClisiCheck
                 //Check the remakrs section
                 if (SearchResults.Updates.Count == 0)
                 {
-                    txtLog.Text = " Windows Atualizado";
+                    txtLog.Text = "Windows Atualizado";
+                    //Verifica se todos os programas estão instalado com sucesso
+                    if (listBoxResult.Items.Count == 0)
+                    {
+                        txtLog.Text = "Todos Os Programas Instalados\nWindows Atualizado";
+                    }
                 }
                 else
                 {
@@ -428,7 +520,7 @@ namespace ClisiCheck
                     case "7-Zip":
                         if (Application.OpenForms.Count == 1)
                         {
-                            aviso.alert("7-Zip");
+                            //aviso.alert("7-Zip");
                             //programas.Show();
                             //programas.Imagens("7-zip");
                             //programas.AbrirForm();

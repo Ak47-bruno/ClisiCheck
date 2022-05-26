@@ -14,6 +14,13 @@ using System.Linq;
 using System.Net;
 using OSVersionExtension;
 using WUApiLib;
+using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using System.Management;
+using System.Threading;
+using System.ServiceProcess;
+
 //TO DO
 // Verificar versionanemento MCAfee, SAP
 // Outras versões Loja, Gerência, 
@@ -44,18 +51,44 @@ namespace ClisiCheck
         {
             InitializeComponent();
             progressBar.Value = 0;
-           // Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            
+            // Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+           
         }
 
-        public void userLabel(string userName)
+        IFirebaseConfig fcon = new FirebaseConfig()
         {
+            AuthSecret = "gkQkKLOmkMlcjApM1YkevEbCvrbhRpDLmulM2vSq",
+            BasePath = "https://log-clisicheck-default-rtdb.firebaseio.com/logs"
+        };
+
+        IFirebaseClient Client;
+        string userLogin = "";
+        public void userLabel(string userName)
+        {           
             lblUserName.Text = "Logado com: " + userName;
+            userLogin = userName;            
         }
 
         private void start_Load(object sender, EventArgs e)
-        {
+        {            
+           Client = new FireSharp.FirebaseClient(fcon);                      
 
+        }
+
+        private void logFirebase()
+        {
+            string serviceTag = GetServiceTag();
+            var nome = Environment.MachineName;
+            string date = DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");            
+            //string dataUser = userLogin + " Data: " + date + " Computador: " + nome;            
+            var dataLayer = new Data
+            {
+                ServiceTag = serviceTag,
+                UserName = userLogin,
+                ComputerName = nome,
+                Date = date
+            };
+            var setter = Client.Set("Dados: "+ serviceTag + " " + nome + " " + date, dataLayer);
         }
 
         private void btnDash_Click(object sender, EventArgs e)
@@ -95,6 +128,30 @@ namespace ClisiCheck
             btnGer.BackColor = Color.FromArgb(46, 51, 73);
         }
 
+        private void btnTelevendasVarejo_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnTelevendasVarejo.Height;
+            pnlNav.Top = btnTelevendasVarejo.Top;
+            lblModo.Text = "Tele Varejo";
+            //listViewResult.Controls.Clear();
+            progressBar.Value = 0;
+            progressBar.Text = progressBar.Value.ToString() + "%";
+            listBoxResult.Items.Clear();
+            btnTelevendasVarejo.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void btnAlmoxarifado_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnAlmoxarifado.Height;
+            pnlNav.Top = btnAlmoxarifado.Top;
+            lblModo.Text = "Almoxarifado";
+            //listViewResult.Controls.Clear();
+            progressBar.Value = 0;
+            progressBar.Text = progressBar.Value.ToString() + "%";
+            listBoxResult.Items.Clear();
+            btnAlmoxarifado.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
         private void btnDash_Leave(object sender, EventArgs e)
         {
             btnDash.BackColor = Color.White;
@@ -110,6 +167,15 @@ namespace ClisiCheck
             btnGer.BackColor = Color.White;
         }
 
+        private void btnTelevendasVarejo_Leave(object sender, EventArgs e)
+        {
+            btnTelevendasVarejo.BackColor = Color.White;
+        }
+        private void btnAlmoxarifado_Leave(object sender, EventArgs e)
+        {
+            btnAlmoxarifado.BackColor = Color.White;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -122,6 +188,7 @@ namespace ClisiCheck
 
         private void btnChek_Click(object sender, EventArgs e)
         {
+            logFirebase();
             btnChek.PointToScreen(panel9.Location);
             listBoxResult.Controls.Clear();
             listBoxResult.Items.Clear();
@@ -135,33 +202,55 @@ namespace ClisiCheck
             {
                 case "Escritório":
                     listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN", "Dell Command"};
-                    escritorioCheck(listProgram);
+                    registrosProgramasCheck(listProgram);
                     checkPasta();
                     editionWindows();
+                    Thread.Sleep(1000);
                     UpdatesAvailable();
                     break;
                 case "Caixa":
-                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint", "Gertec", "Dell Command" };                    
-                    escritorioCheck(listProgram);
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Gertec", "Dell Command" };                    
+                    registrosProgramasCheck(listProgram);
                     impressoraCheck();
                     checkPasta();
                     atalhosCheck();
                     editionWindows();
+                    Thread.Sleep(1000);
                     UpdatesAvailable();
                     break;
                 case "Gerência":
                     listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN", "Digifort Enterprise", "Gertec", "Dell Command" };
-                    escritorioCheck(listProgram);
+                    registrosProgramasCheck(listProgram);
                     impressoraCheck();
                     checkPasta();
                     atalhosCheck();
                     editionWindows();
+                    Thread.Sleep(1000);
+                    UpdatesAvailable();
+                    break;
+                case "Tele Varejo":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "Avaya Communicator", "Dell Command" };
+                    registrosProgramasCheck(listProgram);
+                    checkPasta();
+                    atalhosCheck();
+                    serviceUra();
+                    editionWindows();
+                    Thread.Sleep(1000);
+                    UpdatesAvailable();
+                    break;
+                case "Almoxarifado":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome","Java", "Painel Digital", "Dell Command" };
+                    registrosProgramasCheck(listProgram);
+                    checkPasta();
+                    atalhosCheck();
+                    editionWindows();
+                    Thread.Sleep(1000);
                     UpdatesAvailable();
                     break;
             }
         }
 
-        public void escritorioCheck(List<String> programas)
+        public void registrosProgramasCheck(List<String> programas)
         {
            
             string displayName;
@@ -170,18 +259,7 @@ namespace ClisiCheck
             List<string> list = new List<string>();
             //Lista de programas que contem versão
             List<string> listVersion = new List<string>();            
-            RegistryKey key;
-            switch (lblModo.Text)
-            {
-                case "Escritório":
-                   // listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Google Drive", "Java", "Acrobat Reader DC", "FortiClient VPN"};
-                    break;
-                case "Caixa":
-                    //listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "Google Drive", "Ivanti Endpoint" };
-                    break;
-                case "Gerência":
-                    break;
-            }
+            RegistryKey key;           
 
             //Verifica todos os softwares no computador
             List<String> source = new List<string> { "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall", "SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall" };
@@ -267,25 +345,8 @@ namespace ClisiCheck
             bool result = File.Exists(path);
             switch (lblModo.Text)
             {                
-                case "Caixa":
-
-                    path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
-                    result = File.Exists(path);
-                    if (!result)
-                    {
-                        listBoxResult.Items.Add("Enviar Caixa_NFCE.exe - Atalho.lnk Para Área De Trabalho Pública");
-                    }
-
-                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
-                    result = File.Exists(path);
-                    if (!result)
-                    {
-                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
-                    }
-                    break;
-
+                
                 case "Gerência":
-
                     path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
                     result = File.Exists(path);
                     if (!result)
@@ -307,6 +368,49 @@ namespace ClisiCheck
                         listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
                     }
                     break;
+                case "Tele Varejo":
+                    path = "C:\\Users\\Public\\Desktop\\Avaya Agent Desktop.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Avaya Agent Desktop Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
+                    }                    
+                    break;
+                case "Almoxarifado":
+                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    path = "C:\\Users\\Public\\Desktop\\Etiqueta.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Etiqueta.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    break;
+
             }
 
         }
@@ -316,7 +420,8 @@ namespace ClisiCheck
             List<String> impressoras = new List<string>();
             foreach (String impressora in PrinterSettings.InstalledPrinters)
             {
-                impressoras.Append(impressora);                
+                impressoras.Add(impressora);
+                //listBoxResult.Items.Add(impressora);
             }
             if (!impressoras.Exists(e => e.Contains("CaixaNFCE")))
             {
@@ -373,19 +478,19 @@ namespace ClisiCheck
             switch (lblModo.Text)
             {                
                 case "Caixa":
-                    path = "C:\\EFCEBEMOL";
+                    path = @"C:\ECFBEMOL";
                     result = Directory.Exists(path);
                     if (result != true)
                     {
-                        listBoxResult.Items.Add(@"Pasta C:\EFCEBEMOL");
+                        listBoxResult.Items.Add(@"Pasta C:\ECFBEMOL");
                     }
                     break;
                 case "Gerência":
-                    path = "C:\\EFCEBEMOL";
+                    path = @"C:\ECFBEMOL";
                     result = Directory.Exists(path);
                     if (result != true)
                     {
-                        listBoxResult.Items.Add(@"Pasta C:\EFCEBEMOL");
+                        listBoxResult.Items.Add(@"Pasta C:\ECFBEMOL");
                     }
                     break;
             }
@@ -393,15 +498,34 @@ namespace ClisiCheck
             // Process.Start("cmd.exe", command);
         }
 
+
+        //Verifica o serviço URA
+        public void serviceUra()
+        {
+            ServiceController[] services = ServiceController.GetServices();
+            List<String> servicos = new List<string>();
+            foreach (ServiceController service in services)
+            {
+                servicos.Add(service.ServiceName.ToString());
+            }
+
+            if (!servicos.Exists(e => e.Contains("barra_ura")))
+            {
+                listBoxResult.Items.Add(@"Serviço barra_ura");
+            }
+
+        }
+
         //método para verificar o nome do computador e o dominio
         public void hostName()
         {   
             
-            var nome = Environment.MachineName;
+            var hostname = Environment.MachineName;
             // var dominio = Environment.UserDomainName;
-            var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+            var nomeCompleto = Dns.GetHostEntry(hostname).HostName;
 
-            if (!nomeCompleto.Equals(nome + ".bemol.local"))
+            if (!nomeCompleto.Equals(hostname + ".bemol.local"))
+
             {
                 listBoxResult.Items.Add("Inserir no Domínio bemol.local");
             }
@@ -465,11 +589,12 @@ namespace ClisiCheck
                 }
                 else
                 {
-                    listBoxResult.Items.Add("Windows Possúi Atualizações");
-                    //foreach (IUpdate x in SearchResults.Updates)
-                    //{
-                    //    listBoxResult.Items.Add(x.Title);
-                    //}
+                    listBoxResult.Items.Add("Windows Possui Atualizações");
+                    txtLog.Text = "Windows Possui Atualizações";
+                    foreach (IUpdate x in SearchResults.Updates)
+                    {
+                        listBoxResult.Items.Add(x.Title);
+                    }
                 }
             }
             catch
@@ -484,7 +609,18 @@ namespace ClisiCheck
         {
             txtLog.Clear();
         }
-        
+
+        static private string GetServiceTag()
+        {
+            string servicetag = "UNKNOWN";
+
+            ManagementClass wmi = new ManagementClass("Win32_Bios");
+            foreach (ManagementObject bios in wmi.GetInstances())
+            {
+                servicetag = bios.Properties["Serialnumber"].Value.ToString().Trim();
+            }
+            return servicetag;
+        }
 
         //Move a janela 
         private void start_MouseDown(object sender, MouseEventArgs e)

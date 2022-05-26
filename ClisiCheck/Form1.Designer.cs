@@ -31,11 +31,12 @@ namespace ClisiCheck
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(start));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnTelevendasVarejo = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.btnGer = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnDash = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@ namespace ClisiCheck
             this.btnMinimize = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnAlmoxarifado = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,27 +79,57 @@ namespace ClisiCheck
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.btnAlmoxarifado);
+            this.panel1.Controls.Add(this.btnTelevendasVarejo);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.pnlNav);
             this.panel1.Controls.Add(this.btnGer);
             this.panel1.Controls.Add(this.btnCaixa);
             this.panel1.Controls.Add(this.btnDash);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 443);
+            this.panel1.Size = new System.Drawing.Size(284, 738);
             this.panel1.TabIndex = 0;
+            // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pnlNav.Location = new System.Drawing.Point(0, 240);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(4, 233);
+            this.pnlNav.TabIndex = 2;
+            // 
+            // btnTelevendasVarejo
+            // 
+            this.btnTelevendasVarejo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTelevendasVarejo.FlatAppearance.BorderSize = 0;
+            this.btnTelevendasVarejo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTelevendasVarejo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTelevendasVarejo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnTelevendasVarejo.Image = ((System.Drawing.Image)(resources.GetObject("btnTelevendasVarejo.Image")));
+            this.btnTelevendasVarejo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTelevendasVarejo.Location = new System.Drawing.Point(0, 378);
+            this.btnTelevendasVarejo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTelevendasVarejo.Name = "btnTelevendasVarejo";
+            this.btnTelevendasVarejo.Size = new System.Drawing.Size(280, 62);
+            this.btnTelevendasVarejo.TabIndex = 5;
+            this.btnTelevendasVarejo.Text = "Televendas Varejo";
+            this.btnTelevendasVarejo.UseVisualStyleBackColor = true;
+            this.btnTelevendasVarejo.Click += new System.EventHandler(this.btnTelevendasVarejo_Click);
+            this.btnTelevendasVarejo.Leave += new System.EventHandler(this.btnTelevendasVarejo_Leave);
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.lblVersion);
             this.panel10.Controls.Add(this.lblUserName);
-            this.panel10.Location = new System.Drawing.Point(0, 400);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Location = new System.Drawing.Point(0, 667);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(196, 39);
+            this.panel10.Size = new System.Drawing.Size(280, 65);
             this.panel10.TabIndex = 4;
             // 
             // lblVersion
@@ -105,10 +137,9 @@ namespace ClisiCheck
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVersion.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblVersion.Location = new System.Drawing.Point(7, 22);
-            this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVersion.Location = new System.Drawing.Point(10, 37);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(134, 15);
+            this.lblVersion.Size = new System.Drawing.Size(202, 25);
             this.lblVersion.TabIndex = 1;
             this.lblVersion.Text = "ClisiCheck Versão Demo";
             // 
@@ -116,10 +147,9 @@ namespace ClisiCheck
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblUserName.Location = new System.Drawing.Point(7, 7);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserName.Location = new System.Drawing.Point(10, 12);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(62, 15);
+            this.lblUserName.Size = new System.Drawing.Size(94, 25);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "UserName";
             // 
@@ -127,18 +157,11 @@ namespace ClisiCheck
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 438);
+            this.panel7.Location = new System.Drawing.Point(0, 732);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(196, 1);
+            this.panel7.Size = new System.Drawing.Size(280, 2);
             this.panel7.TabIndex = 3;
-            // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pnlNav.Location = new System.Drawing.Point(0, 121);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(3, 100);
-            this.pnlNav.TabIndex = 2;
             // 
             // btnGer
             // 
@@ -149,9 +172,10 @@ namespace ClisiCheck
             this.btnGer.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnGer.Image = global::ClisiCheck.Properties.Resources.manager;
             this.btnGer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGer.Location = new System.Drawing.Point(0, 189);
+            this.btnGer.Location = new System.Drawing.Point(0, 316);
+            this.btnGer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGer.Name = "btnGer";
-            this.btnGer.Size = new System.Drawing.Size(196, 37);
+            this.btnGer.Size = new System.Drawing.Size(280, 62);
             this.btnGer.TabIndex = 1;
             this.btnGer.Text = "Gerência";
             this.btnGer.UseVisualStyleBackColor = true;
@@ -167,9 +191,10 @@ namespace ClisiCheck
             this.btnCaixa.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnCaixa.Image = global::ClisiCheck.Properties.Resources.payment_method;
             this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCaixa.Location = new System.Drawing.Point(0, 152);
+            this.btnCaixa.Location = new System.Drawing.Point(0, 254);
+            this.btnCaixa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(196, 37);
+            this.btnCaixa.Size = new System.Drawing.Size(280, 62);
             this.btnCaixa.TabIndex = 1;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = true;
@@ -185,9 +210,10 @@ namespace ClisiCheck
             this.btnDash.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnDash.Image = global::ClisiCheck.Properties.Resources.work;
             this.btnDash.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDash.Location = new System.Drawing.Point(0, 115);
+            this.btnDash.Location = new System.Drawing.Point(0, 192);
+            this.btnDash.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDash.Name = "btnDash";
-            this.btnDash.Size = new System.Drawing.Size(196, 37);
+            this.btnDash.Size = new System.Drawing.Size(280, 62);
             this.btnDash.TabIndex = 1;
             this.btnDash.Text = "Escritório";
             this.btnDash.UseVisualStyleBackColor = true;
@@ -200,16 +226,18 @@ namespace ClisiCheck
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 115);
+            this.panel2.Size = new System.Drawing.Size(280, 192);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ClisiCheck.Properties.Resources.bedigital;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -219,9 +247,10 @@ namespace ClisiCheck
             this.lblModo.AutoSize = true;
             this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblModo.ForeColor = System.Drawing.Color.White;
-            this.lblModo.Location = new System.Drawing.Point(221, 9);
+            this.lblModo.Location = new System.Drawing.Point(316, 15);
+            this.lblModo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(143, 32);
+            this.lblModo.Size = new System.Drawing.Size(206, 48);
             this.lblModo.TabIndex = 1;
             this.lblModo.Text = "Escritório";
             // 
@@ -231,9 +260,10 @@ namespace ClisiCheck
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(763, -7);
+            this.btnClose.Location = new System.Drawing.Point(1090, -12);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.Size = new System.Drawing.Size(36, 42);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "x";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -245,18 +275,18 @@ namespace ClisiCheck
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(204, 50);
+            this.panel3.Location = new System.Drawing.Point(291, 83);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(235, 151);
+            this.panel3.Size = new System.Drawing.Size(336, 252);
             this.panel3.TabIndex = 3;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnChek);
-            this.panel8.Location = new System.Drawing.Point(2, 30);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(3, 50);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(231, 119);
+            this.panel8.Size = new System.Drawing.Size(330, 198);
             this.panel8.TabIndex = 2;
             // 
             // btnChek
@@ -274,12 +304,12 @@ namespace ClisiCheck
             this.btnChek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChek.Font = new System.Drawing.Font("Segoe UI", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChek.ForeColor = System.Drawing.Color.Transparent;
-            this.btnChek.Location = new System.Drawing.Point(11, 5);
-            this.btnChek.Margin = new System.Windows.Forms.Padding(1);
-            this.btnChek.MaximumSize = new System.Drawing.Size(214, 109);
-            this.btnChek.MinimumSize = new System.Drawing.Size(214, 109);
+            this.btnChek.Location = new System.Drawing.Point(16, 8);
+            this.btnChek.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.btnChek.MaximumSize = new System.Drawing.Size(306, 182);
+            this.btnChek.MinimumSize = new System.Drawing.Size(306, 182);
             this.btnChek.Name = "btnChek";
-            this.btnChek.Size = new System.Drawing.Size(214, 109);
+            this.btnChek.Size = new System.Drawing.Size(306, 182);
             this.btnChek.TabIndex = 1;
             this.btnChek.UseVisualStyleBackColor = false;
             this.btnChek.Click += new System.EventHandler(this.btnChek_Click);
@@ -289,9 +319,10 @@ namespace ClisiCheck
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(39, 0);
+            this.label2.Location = new System.Drawing.Point(56, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 28);
+            this.label2.Size = new System.Drawing.Size(259, 41);
             this.label2.TabIndex = 0;
             this.label2.Text = "Iniciar Checagem";
             // 
@@ -301,18 +332,18 @@ namespace ClisiCheck
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Location = new System.Drawing.Point(204, 242);
+            this.panel4.Location = new System.Drawing.Point(291, 403);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 197);
+            this.panel4.Size = new System.Drawing.Size(336, 328);
             this.panel4.TabIndex = 3;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.txtLog);
-            this.panel11.Location = new System.Drawing.Point(0, 158);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Location = new System.Drawing.Point(0, 263);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(235, 39);
+            this.panel11.Size = new System.Drawing.Size(336, 65);
             this.panel11.TabIndex = 3;
             // 
             // txtLog
@@ -322,10 +353,9 @@ namespace ClisiCheck
             this.txtLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLog.Location = new System.Drawing.Point(0, 0);
-            this.txtLog.Margin = new System.Windows.Forms.Padding(2);
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
-            this.txtLog.Size = new System.Drawing.Size(235, 39);
+            this.txtLog.Size = new System.Drawing.Size(336, 65);
             this.txtLog.TabIndex = 0;
             this.txtLog.Text = "";
             // 
@@ -333,10 +363,9 @@ namespace ClisiCheck
             // 
             this.panel9.AutoSize = true;
             this.panel9.Controls.Add(this.progressBar);
-            this.panel9.Location = new System.Drawing.Point(37, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(53, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(166, 156);
+            this.panel9.Size = new System.Drawing.Size(237, 260);
             this.panel9.TabIndex = 2;
             // 
             // progressBar
@@ -349,7 +378,8 @@ namespace ClisiCheck
             this.progressBar.InnerColor = System.Drawing.Color.White;
             this.progressBar.InnerMargin = 2;
             this.progressBar.InnerWidth = -1;
-            this.progressBar.Location = new System.Drawing.Point(8, 9);
+            this.progressBar.Location = new System.Drawing.Point(11, 15);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar.MarqueeAnimationSpeed = 500;
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.Gray;
@@ -358,7 +388,7 @@ namespace ClisiCheck
             this.progressBar.ProgressColor = System.Drawing.Color.RoyalBlue;
             this.progressBar.ProgressWidth = 6;
             this.progressBar.SecondaryFont = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.progressBar.Size = new System.Drawing.Size(150, 138);
+            this.progressBar.Size = new System.Drawing.Size(214, 230);
             this.progressBar.StartAngle = 270;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -377,9 +407,10 @@ namespace ClisiCheck
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.pnlResult);
-            this.panel5.Location = new System.Drawing.Point(442, 17);
+            this.panel5.Location = new System.Drawing.Point(631, 28);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(346, 422);
+            this.panel5.Size = new System.Drawing.Size(494, 703);
             this.panel5.TabIndex = 3;
             // 
             // pnlResult
@@ -389,8 +420,9 @@ namespace ClisiCheck
             this.pnlResult.Controls.Add(this.listBoxResult);
             this.pnlResult.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlResult.Location = new System.Drawing.Point(0, 0);
+            this.pnlResult.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlResult.Name = "pnlResult";
-            this.pnlResult.Size = new System.Drawing.Size(346, 424);
+            this.pnlResult.Size = new System.Drawing.Size(494, 707);
             this.pnlResult.TabIndex = 1;
             // 
             // label4
@@ -398,9 +430,10 @@ namespace ClisiCheck
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(122, 10);
+            this.label4.Location = new System.Drawing.Point(174, 17);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 28);
+            this.label4.Size = new System.Drawing.Size(141, 41);
             this.label4.TabIndex = 2;
             this.label4.Text = "Faltando";
             // 
@@ -411,11 +444,11 @@ namespace ClisiCheck
             this.listBoxResult.ForeColor = System.Drawing.Color.RoyalBlue;
             this.listBoxResult.FormattingEnabled = true;
             this.listBoxResult.HorizontalScrollbar = true;
-            this.listBoxResult.ItemHeight = 19;
-            this.listBoxResult.Location = new System.Drawing.Point(3, 41);
-            this.listBoxResult.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.listBoxResult.ItemHeight = 29;
+            this.listBoxResult.Location = new System.Drawing.Point(4, 68);
+            this.listBoxResult.Margin = new System.Windows.Forms.Padding(7, 5, 4, 5);
             this.listBoxResult.Name = "listBoxResult";
-            this.listBoxResult.Size = new System.Drawing.Size(340, 361);
+            this.listBoxResult.Size = new System.Drawing.Size(486, 580);
             this.listBoxResult.TabIndex = 0;
             this.listBoxResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxResult_MouseDoubleClick);
             // 
@@ -425,9 +458,10 @@ namespace ClisiCheck
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(732, -7);
+            this.btnMinimize.Location = new System.Drawing.Point(1046, -12);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(36, 42);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.Text = "-";
             this.btnMinimize.UseVisualStyleBackColor = true;
@@ -438,9 +472,10 @@ namespace ClisiCheck
             this.panel6.AutoScroll = true;
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Location = new System.Drawing.Point(204, 205);
+            this.panel6.Location = new System.Drawing.Point(291, 342);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 38);
+            this.panel6.Size = new System.Drawing.Size(336, 63);
             this.panel6.TabIndex = 4;
             // 
             // label3
@@ -449,19 +484,39 @@ namespace ClisiCheck
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(86, 6);
+            this.label3.Location = new System.Drawing.Point(136, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 28);
+            this.label3.Size = new System.Drawing.Size(105, 41);
             this.label3.TabIndex = 1;
             this.label3.Text = "Status";
             // 
+            // btnAlmoxarifado
+            // 
+            this.btnAlmoxarifado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlmoxarifado.FlatAppearance.BorderSize = 0;
+            this.btnAlmoxarifado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlmoxarifado.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlmoxarifado.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnAlmoxarifado.Image = ((System.Drawing.Image)(resources.GetObject("btnAlmoxarifado.Image")));
+            this.btnAlmoxarifado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlmoxarifado.Location = new System.Drawing.Point(0, 440);
+            this.btnAlmoxarifado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAlmoxarifado.Name = "btnAlmoxarifado";
+            this.btnAlmoxarifado.Size = new System.Drawing.Size(280, 62);
+            this.btnAlmoxarifado.TabIndex = 6;
+            this.btnAlmoxarifado.Text = "Almoxarifado";
+            this.btnAlmoxarifado.UseVisualStyleBackColor = true;
+            this.btnAlmoxarifado.Click += new System.EventHandler(this.btnAlmoxarifado_Click);
+            this.btnAlmoxarifado.Leave += new System.EventHandler(this.btnAlmoxarifado_Leave);
+            // 
             // start
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(792, 443);
+            this.ClientSize = new System.Drawing.Size(1131, 738);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -472,6 +527,7 @@ namespace ClisiCheck
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -534,5 +590,7 @@ namespace ClisiCheck
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.RichTextBox txtLog;
+        private System.Windows.Forms.Button btnTelevendasVarejo;
+        private System.Windows.Forms.Button btnAlmoxarifado;
     }
 }

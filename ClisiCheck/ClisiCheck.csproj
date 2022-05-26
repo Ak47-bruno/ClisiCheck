@@ -5,6 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>ClisiCheck.Program</StartupObject>
+    <ApplicationIcon>clisiCheck.ico</ApplicationIcon>
+    <Authors>Bruno Bente</Authors>
+    <Company>Bemol</Company>
+    <PackageIcon>ClisiChecknfra30Horas.ico</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,12 +22,21 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="{4fb2d46f-efc8-4643-bcd0-6e5bfa6a174c}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>4fb2d46f-efc8-4643-bcd0-6e5bfa6a174c</Guid>
+    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.2.0" />
+    <PackageReference Include="FireSharp" Version="2.0.4" />
     <PackageReference Include="OSVersionExt" Version="1.0.1" />
     <PackageReference Include="System.DirectoryServices" Version="6.0.0" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +52,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Downloads\ClisiChecknfra30Horas.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

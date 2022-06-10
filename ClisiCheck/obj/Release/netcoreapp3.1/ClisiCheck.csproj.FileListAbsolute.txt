@@ -59,7 +59,6 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\O
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\Interop.WUApiLib.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.ResolveComReference.cache
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\Interop.WUApiLib.dll
-C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.AssemblyReference.cache
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\FireSharp.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\Microsoft.Threading.Tasks.Extensions.Desktop.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\Microsoft.Threading.Tasks.Extensions.dll
@@ -77,3 +76,4 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\S
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\obj\Release\netcoreapp3.1\ClisiCheck.csproj.AssemblyReference.cache

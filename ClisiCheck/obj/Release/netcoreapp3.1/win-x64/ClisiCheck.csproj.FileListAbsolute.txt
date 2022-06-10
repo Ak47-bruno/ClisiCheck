@@ -751,7 +751,6 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\w
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\hostfxr.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\hostpolicy.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscordaccore.dll
-C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.22.16002.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscordbi.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscorrc.debug.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscorrc.dll
@@ -1016,3 +1015,4 @@ C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\w
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\wpfgfx_cor3.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\System.Diagnostics.EventLog.Messages.dll
 C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\System.ServiceProcess.ServiceController.dll
+C:\Users\15992\Documents\ClisiCheck 1.0.0\ClisiCheck\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.22.21202.dll

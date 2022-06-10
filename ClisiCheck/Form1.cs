@@ -152,6 +152,18 @@ namespace ClisiCheck
             btnAlmoxarifado.BackColor = Color.FromArgb(46, 51, 73);
         }
 
+        private void btnSac_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnSac.Height;
+            pnlNav.Top = btnSac.Top;
+            lblModo.Text = "SAC";
+            //listViewResult.Controls.Clear();
+            progressBar.Value = 0;
+            progressBar.Text = progressBar.Value.ToString() + "%";
+            listBoxResult.Items.Clear();
+            btnSac.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
         private void btnDash_Leave(object sender, EventArgs e)
         {
             btnDash.BackColor = Color.White;
@@ -174,6 +186,11 @@ namespace ClisiCheck
         private void btnAlmoxarifado_Leave(object sender, EventArgs e)
         {
             btnAlmoxarifado.BackColor = Color.White;
+        }
+
+        private void btnSac_Leave(object sender, EventArgs e)
+        {
+            btnSac.BackColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -240,6 +257,15 @@ namespace ClisiCheck
                     break;
                 case "Almoxarifado":
                     listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome","Java", "Painel Digital", "Dell Command" };
+                    registrosProgramasCheck(listProgram);
+                    checkPasta();
+                    atalhosCheck();
+                    editionWindows();
+                    Thread.Sleep(1000);
+                    UpdatesAvailable();
+                    break;
+                case "SAC":
+                    listProgram = new List<string> { "7-Zip", "Carsybde", "Google Chrome", "CutePDF", "Java", "Acrobat Reader DC", "Gertec", "Dell Command"};
                     registrosProgramasCheck(listProgram);
                     checkPasta();
                     atalhosCheck();
@@ -410,7 +436,28 @@ namespace ClisiCheck
                         listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
                     }
                     break;
+                case "SAC":
+                    path = "C:\\Users\\Public\\Desktop\\Caixa_NFCE.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Caixa_NFCE.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
 
+                    path = "C:\\Users\\Public\\Desktop\\Prev32.exe - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar Prev32.exe - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+
+                    path = "C:\\Users\\Public\\Desktop\\SAC - Atalho.lnk";
+                    result = File.Exists(path);
+                    if (!result)
+                    {
+                        listBoxResult.Items.Add("Enviar SAC - Atalho.lnk Para Área De Trabalho Pública");
+                    }
+                    break;
             }
 
         }
@@ -435,12 +482,13 @@ namespace ClisiCheck
             string path = "C:\\Program Files\\";
             bool result = Directory.Exists(path);
 
-
+            path = "C:\\app\\Administrador";
+            bool result2 = Directory.Exists(path);
             path = "C:\\app\\product\\11.2.0";
             result = Directory.Exists(path);
             progressBar.Value += 5;
             progressBar.Text = progressBar.Value.ToString() + "%";
-            if (result != true)
+            if (result != true || result2 != true )
             {
 
                 listBoxResult.Items.Add("Oracle Net Manager");
@@ -486,6 +534,14 @@ namespace ClisiCheck
                     }
                     break;
                 case "Gerência":
+                    path = @"C:\ECFBEMOL";
+                    result = Directory.Exists(path);
+                    if (result != true)
+                    {
+                        listBoxResult.Items.Add(@"Pasta C:\ECFBEMOL");
+                    }
+                    break;
+                case "SAC":
                     path = @"C:\ECFBEMOL";
                     result = Directory.Exists(path);
                     if (result != true)

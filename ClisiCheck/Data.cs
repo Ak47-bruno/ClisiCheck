@@ -14,5 +14,7 @@ namespace ClisiCheck
 
         public string Date { get; set; }
 
+        public string Template { get; set; }
+
     }
 }

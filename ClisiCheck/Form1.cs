@@ -63,6 +63,7 @@ namespace ClisiCheck
 
         IFirebaseClient Client;
         string userLogin = "";
+        string template = "";
         public void userLabel(string userName)
         {           
             lblUserName.Text = "Logado com: " + userName;
@@ -71,8 +72,8 @@ namespace ClisiCheck
 
         private void start_Load(object sender, EventArgs e)
         {            
-           Client = new FireSharp.FirebaseClient(fcon);                      
-
+           Client = new FireSharp.FirebaseClient(fcon);
+            template = lblModo.Text;
         }
 
         private void logFirebase()
@@ -86,7 +87,8 @@ namespace ClisiCheck
                 ServiceTag = serviceTag,
                 UserName = userLogin,
                 ComputerName = nome,
-                Date = date
+                Date = date,
+                Template = template
             };
             var setter = Client.Set("Dados: "+ serviceTag + " " + nome + " " + date, dataLayer);
         }
@@ -97,6 +99,7 @@ namespace ClisiCheck
             pnlNav.Top = btnDash.Top;
             pnlNav.Left = btnDash.Left;
             lblModo.Text = "Escritório";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -109,6 +112,7 @@ namespace ClisiCheck
             pnlNav.Height = btnCaixa.Height;
             pnlNav.Top = btnCaixa.Top;
             lblModo.Text = "Caixa";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -121,6 +125,7 @@ namespace ClisiCheck
             pnlNav.Height = btnGer.Height;
             pnlNav.Top = btnGer.Top;
             lblModo.Text = "Gerência";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -133,6 +138,7 @@ namespace ClisiCheck
             pnlNav.Height = btnTelevendasVarejo.Height;
             pnlNav.Top = btnTelevendasVarejo.Top;
             lblModo.Text = "Tele Varejo";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -145,6 +151,7 @@ namespace ClisiCheck
             pnlNav.Height = btnAlmoxarifado.Height;
             pnlNav.Top = btnAlmoxarifado.Top;
             lblModo.Text = "Almoxarifado";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -157,6 +164,7 @@ namespace ClisiCheck
             pnlNav.Height = btnSac.Height;
             pnlNav.Top = btnSac.Top;
             lblModo.Text = "SAC";
+            template = lblModo.Text;
             //listViewResult.Controls.Clear();
             progressBar.Value = 0;
             progressBar.Text = progressBar.Value.ToString() + "%";
@@ -482,13 +490,11 @@ namespace ClisiCheck
             string path = "C:\\Program Files\\";
             bool result = Directory.Exists(path);
 
-            path = "C:\\app\\Administrador";
-            bool result2 = Directory.Exists(path);
             path = "C:\\app\\product\\11.2.0";
             result = Directory.Exists(path);
             progressBar.Value += 5;
             progressBar.Text = progressBar.Value.ToString() + "%";
-            if (result != true || result2 != true )
+            if (result != true )
             {
 
                 listBoxResult.Items.Add("Oracle Net Manager");
